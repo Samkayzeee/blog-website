@@ -5,8 +5,6 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
-// import Layout from './layout/Layout';
-
 const Dash_board = React.lazy(() => import('./pages/dashboard/Dashboard'));
 const Signup = React.lazy(() => import('./pages/account/signup/Signup'));
 const Login = React.lazy(() => import('./pages/account/login/Login'));

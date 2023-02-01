@@ -29,21 +29,7 @@ const Navbar = () => {
           <li>
             <Link className="nav-link" to={'/signup'}>Create an Account</Link>
           </li>
-          {/* <li className="nav-item dropdown">
-            <Link className="nav-link dropdown-toggle" to={'#'} role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </Link>
-            <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to={'/login'}>Login</Link></li>
-              <li><Link className="dropdown-item" to={"/signup"}>Signup</Link></li>
-              <li><Link className="dropdown-item" to={'#'}>Something else here</Link></li>
-            </ul>
-          </li> */}
         </ul>
-        {/* <form className="d-flex mt-3" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form> */}
       </div>
     </div>
   </div>
