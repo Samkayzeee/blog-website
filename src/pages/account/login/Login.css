@@ -76,3 +76,8 @@
     height: 100%;
     background-color: rgb(100, 195, 100);
   }
+  .login-form p{
+    color: red;
+    transition: all .3s;
+    font-weight: 600;
+  }

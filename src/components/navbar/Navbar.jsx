@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
 
 const Navbar = () => {
+const navigate = useNavigate();
+
+  const Logout = () => {
+    localStorage.removeItem("Userdata");
+    localStorage.removeItem("token");
+    navigate('/');
+  }
     return ( 
         <>
            <nav className="navbar bg-body-tertiary">
@@ -28,6 +35,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link className="nav-link" to={'/signup'}>Create an Account</Link>
+          </li>
+
+          <li>
+            <button onClick={Logout}>Log Out</button>
           </li>
         </ul>
       </div>

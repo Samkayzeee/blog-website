@@ -17,9 +17,11 @@ const Signup = () => {
       let signupData = {
          email:email,
          username:username,
-         password:password
+         password:password,
       }
+      let token = true;
       console.log(signupData);
+      localStorage.setItem("token", JSON.stringify(token));
       localStorage.setItem("Userdata", JSON.stringify(signupData));
 
       e.target.reset();

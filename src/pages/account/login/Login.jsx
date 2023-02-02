@@ -1,29 +1,47 @@
 import Navbar from "../../../components/navbar/Navbar";
 import './Login.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const Login = () => {
+    const wrongloginRef = useRef(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+
+    const RawUserdata = localStorage.getItem("Userdata");
+    const Userdata = JSON.parse(RawUserdata);
+
+    let token = false;
+    // localStorage.removeItem("token");
 
     const Login  = (e) => {
             e.preventDefault();
+            const wrongLogin = wrongloginRef.current;
 
         let LoginData = {
             email:email,
             password:password
         }    
 
-    const RawUserdata = localStorage.getItem("Userdata");
-    const Userdata = JSON.parse(RawUserdata);
-
-    if (LoginData.email === Userdata.email && LoginData.password === Userdata.password) {
-        console.log("Login Successful");
-    }
-    else{
-        console.log("Not Successful");
-    }
-
+        if (!Userdata) {
+            console.log("User not Register");
+            wrongLogin.innerHTML = "User Not Register Try Signing Up";
+        }
+        else{
+            if (LoginData.email === Userdata.email && LoginData.password === Userdata.password) {
+                console.log("Login Successful");
+                let token = true;
+                localStorage.setItem("token", JSON.stringify(token))
+                navigate('/dashboard');
+            }
+            else{
+                console.log("Not Successful");
+                wrongLogin.innerHTML = "Login Not Successful";
+            }
+        }
     e.target.reset();
     }
     return ( 
@@ -41,6 +59,7 @@ const Login = () => {
 
             <label htmlFor="password">Password*</label>
             <input onChange={(e) => setPassword(e.target.value)} type="password" name="" id="password" required minLength={8}/>
+            <p ref={wrongloginRef}></p>
 
             <button type="submit">Login <i className="fa-solid fa-right-to-bracket"></i></button>
 
