@@ -4,47 +4,40 @@ import './Navbar.css';
 const Navbar = () => {
 const navigate = useNavigate();
 
+
+const token = localStorage.getItem("token");
+
   const Logout = () => {
-    localStorage.removeItem("Userdata");
     localStorage.removeItem("token");
     navigate('/');
   }
     return ( 
         <>
-           <nav className="navbar bg-body-tertiary">
-  <div className="container-fluid">
-    <Link className="navbar-brand" to={'/'}>SAMKAYZEE.</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div className="offcanvas-header">
-        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Navbar</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div className="offcanvas-body">
-        <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to={'/'}>Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to={'/dashboard'}>Dashboard</Link>
-          </li>
-          <li>
-            <Link className="nav-link" to={'/login'}>Login</Link>
-          </li>
-          <li>
-            <Link className="nav-link" to={'/signup'}>Create an Account</Link>
-          </li>
+                <nav className="Navbar">
+                  <div className="logo">
+                      <Link to={'/'}>SAMKAYZEE.</Link>
+                  </div>
+                  
+                  <div className="links">
+                    <ul>
+                      <li> <Link to={'/'}>Home</Link> </li>
+                      <li> <Link to={'/contact'}>Contact Me</Link> </li>
+                      <li> <Link to={'/dashboard'}>Blogs</Link> </li>
+                    </ul>
+                  </div>
 
-          <li>
-            <button onClick={Logout}>Log Out</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+                  <div className="account">
+                      {
+                        token?
+                        <button onClick={Logout} className="log out">Log Out</button>:<Link to={'/login'}>Log in</Link>
+                      }
+
+                      {
+                        token?
+                        null: <Link to={'/signup'}>Signup</Link>
+                      }
+                  </div>
+                </nav>
         </>
      );
 }

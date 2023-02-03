@@ -1,7 +1,69 @@
-.navbar{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Navbar{
     border-bottom: solid 1.5px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     background-color: white;
     z-index: +2;
+    padding: 1% 2%;
+}
+.Navbar .logo{
+    height: fit-content;
+}
+.Navbar .logo a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-weight: 900;
+}
+.Navbar .links ul{
+    margin: auto 0;
+}
+.Navbar .links ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.Navbar .links ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+.Navbar .links ul li a:hover{
+    color: rgb(100, 195, 100);
+}
+.Navbar .account a{
+    padding: 8px 20px;
+    color: white;
+    background-color: black;
+    transition: all .3s;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.Navbar .account a:hover{
+    background-color: rgb(100, 195, 100);
+}
+.Navbar .account a:last-child{
+    margin-left: 20px;
+}
+.Navbar .account button{
+    padding: 6px 10px;
+    color: white;
+    background-color: black;
+    transition: all .3s;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.Navbar .account button:hover{
+    background-color: rgb(100, 195, 100);
 }

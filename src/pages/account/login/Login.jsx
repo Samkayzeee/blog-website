@@ -14,9 +14,6 @@ const Login = () => {
     const RawUserdata = localStorage.getItem("Userdata");
     const Userdata = JSON.parse(RawUserdata);
 
-    let token = false;
-    // localStorage.removeItem("token");
-
     const Login  = (e) => {
             e.preventDefault();
             const wrongLogin = wrongloginRef.current;

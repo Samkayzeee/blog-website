@@ -9,19 +9,26 @@ const Dash_board = React.lazy(() => import('./pages/dashboard/Dashboard'));
 const Signup = React.lazy(() => import('./pages/account/signup/Signup'));
 const Login = React.lazy(() => import('./pages/account/login/Login'));
 const Home = React.lazy(() => import('./pages/home/Home'));
+const Contact = React.lazy(() => import('./pages/contact/Contact'));
+const Error404Page = React.lazy(() => import('./pages/error/404'));
+const DetailsPage = React.lazy(() => import('./pages/details/Details'));
+
+const loading = <h1>Loading...</h1>;
 
 const router = createBrowserRouter([
-  {path:'/', element : <Home />},
+  {path:'/', element : <Home />, errorElement:<Error404Page />},
   {path:'/signup', element: <Signup />},
   {path:'/login', element: <Login />},
-  {path:'/dashboard', element: <Dash_board />}
+  {path:'/dashboard', element: <Dash_board />},
+  {path:'/contact', element: <Contact />},
+  {path:'/details/:id', element: <DetailsPage />}
 ])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
         <Suspense>
-              <RouterProvider router={router} />
+              <RouterProvider router={router}  fallbackElement={loading} />
         </Suspense>
   </React.StrictMode>
 )
