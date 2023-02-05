@@ -1,0 +1,22 @@
+.footer{
+    padding: 2% 4%;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px lightgray;
+    margin-top: 1%;
+}
+.footer .section1 h5{
+    font-size: 15px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+.footer .links a{
+   margin-left: 15px;
+   color: black;
+   font-weight: 600;
+   font-size: 19px;
+   transition: all .3s;
+}
+.footer .links a:hover{
+  color: rgb(100, 195, 100);
+}

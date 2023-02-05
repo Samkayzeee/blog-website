@@ -1,3 +1,65 @@
 .home-container{
-    padding: 2% 4%;
+    background-color: whitesmoke;
 }
+
+.home-container .section1{
+    background: 
+    linear-gradient(to right,  rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.92)), 
+    url('../../assets/home-page-pic.jpg');
+    padding: 12% 0;
+    background-size: cover;
+}
+.home-container .section1 h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+.home-container .section1 h3{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    margin: 2% 0;
+}
+.home-container .section1 a{
+    color: white;
+    padding: 1% 2%;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    margin: 2% 0;
+    outline: none;
+    border-radius: 6px;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.9;
+    overflow: hidden;
+    border: none;
+    width: fit-content;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+  .home-container .section1 a:hover {
+    color: white;
+  }
+  .home-container .section1 a:hover:after {
+    width: 100%;
+  }
+  .home-container .section1 a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(100, 195, 100);
+  }
+  .home-container .section1 a i{
+    display: inline-block;
+    margin-left: 10px;
+  }

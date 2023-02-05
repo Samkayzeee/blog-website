@@ -1,7 +1,21 @@
+import { Link } from 'react-router-dom';
+import './Footer.css';
+
 const Footer = () => {
     return ( 
         <>
-             This is footer
+             <footer className="footer">
+               <div className="section1">
+                    <h5>Copyright <i class="fa-regular fa-copyright"></i> 2023 Samkayzee Blog. By Lasisi Abdulsamad</h5>
+               </div>
+
+               <div className="links">
+                    <Link to={'https://github.com/Samkayzeee'} target={'_blank'}><i class="fa-brands fa-github"></i></Link>
+                    <Link to={'www.linkedin.com/in/lasisi-abdulsamad-1a493b22b'} target={'_blank'}><i class="fa-brands fa-linkedin"></i></Link>
+                    <Link to={'https://www.instagram.com/samkayzee/'} target={'_blank'}><i class="fa-brands fa-instagram"></i></Link>
+
+               </div>
+             </footer>
         </>
      );
 }

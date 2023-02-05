@@ -3,6 +3,7 @@ import './Login.css';
 import { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import Footer from './../../../components/footer/Footer';
 
 const Login = () => {
     const wrongloginRef = useRef(null);
@@ -62,6 +63,7 @@ const Login = () => {
 
         </form>
         </div>
+        <Footer />
         </>
      );
 }
