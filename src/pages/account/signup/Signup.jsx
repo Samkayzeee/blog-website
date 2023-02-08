@@ -1,11 +1,14 @@
 import { useState } from "react";
 import Navbar from "../../../components/navbar/Navbar";
 import './Signup.css';
+import Footer from './../../../components/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const Signup = () => {
+   const navigate = useNavigate();
 
    const [email, setEmail] = useState("");
    const [username, setUsername] = useState("");
@@ -20,11 +23,11 @@ const Signup = () => {
          password:password,
       }
       let token = true;
-      console.log(signupData);
       localStorage.setItem("token", JSON.stringify(token));
       localStorage.setItem("Userdata", JSON.stringify(signupData));
 
       e.target.reset();
+      navigate('/dashboard');
    }
 
     return ( 
@@ -51,6 +54,7 @@ const Signup = () => {
         </form>
 
            </div>
+           <Footer />
         </>
      );
 }

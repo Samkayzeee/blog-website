@@ -1,3 +1,148 @@
-.contact-container{
-    padding: 2% 4%;
+.contact-container .section1{
+    background: 
+    linear-gradient(to right,  rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.92)), 
+    url('../../assets/home-page-pic.jpg');
+    padding: 12% 0;
+    background-size: cover;
+    background-attachment: fixed;
 }
+.contact-container .section1 h1{
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 700;
+    animation: fade_in 1s linear;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    visibility: hidden;
+}
+@keyframes fade_in {
+  0%{
+    transform: translateY(50px);
+    visibility: visible;
+  }
+  25%{
+    transform: translateY(35px);
+    visibility: visible;
+  }
+  50%{
+    transform: translateY(20px);
+    visibility: visible;
+  }
+  75%{
+    transform: translateY(10px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+.contact-information{
+    padding: 0 4%;
+}
+.contact-information h3{
+    margin: 3% 0;
+}
+.contact-information .infos{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-information .infos .address, .contact-information .infos .phone span, .contact-information .infos .email span{
+    opacity: 0.8;
+}
+.contact-form{
+    padding: 2% 4%;
+    width: 70%;
+    margin: 3% auto;
+    background-color: rgb(248, 248, 248);
+}
+.contact-form input{
+    display: block;
+    margin: 3% 0;
+    width: 100%;
+    padding: 3% 2%;
+    border: solid 1.5px lightgray;
+    border-radius: 7px;
+    transition: all .4s;
+}
+.contact-form textarea{
+    width: 100%;
+    padding: 3% 2%;
+    border: solid 1.5px lightgray;
+    border-radius: 7px;
+    transition: all .4s;
+    margin-bottom: 3%;
+    resize: none;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    transition: all .4s;
+    outline: none;
+}
+
+.contact-form button{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    margin: 2% 0;
+    outline: none;
+    border-radius: 6px;
+    z-index: 0;
+    background-color: black;
+    opacity: 0.9;
+    overflow: hidden;
+    border: none;
+    color: white;
+    padding: 2% 5%;
+    margin: 0 auto;
+  }
+  .contact-form button:hover {
+    color: white;
+  }
+  .contact-form button:hover:after {
+    width: 100%;
+  }
+  .contact-form button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(100, 195, 100);
+  }
+
+  @media screen and (max-width:800px) {
+    .contact-container .section1{
+        background-attachment: scroll;
+    }
+    .contact-container .section1 h1{
+        font-size: 50px
+    }
+    .contact-information h3{
+        text-align: center;
+    }
+    .contact-information .infos{
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-information .infos .address, .contact-information .infos .phone, .contact-information .infos .email {
+        margin: 2% 0;
+    }
+    .contact-form{
+        width: 100%;
+    }
+  }
+  @media screen and (max-width:290px) {
+    .contact-information .infos .address, .contact-information .infos .phone, .contact-information .infos .email{
+      font-size: 14px;
+    }
+  }
+

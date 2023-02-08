@@ -1,5 +1,5 @@
 .signup-container{
-    padding: 2%;
+    padding: 0 0 2% 0;
     background-color: whitesmoke;
 }
 .signup-container .img{
@@ -15,6 +15,33 @@
     font-size: 50px;
     text-align: center;
     color: white;
+    animation: fade_in 1s linear;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    visibility: hidden;
+}
+@keyframes fade_in {
+  0%{
+    transform: translateY(50px);
+    visibility: visible;
+  }
+  25%{
+    transform: translateY(35px);
+    visibility: visible;
+  }
+  50%{
+    transform: translateY(20px);
+    visibility: visible;
+  }
+  75%{
+    transform: translateY(10px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 .signup-form{
@@ -74,4 +101,18 @@
     width: 0;
     height: 100%;
     background-color: rgb(100, 195, 100);
+  }
+  @media screen and (max-width:800px) {
+    .signup-container .img h1{
+        font-size: 40px;
+    }
+    .signup-form{
+        width: 90%;
+        margin: 8% auto;
+    }
+    .signup-form button{
+        width: 70%;
+        display: block;
+        margin: 2% auto;
+    }
   }

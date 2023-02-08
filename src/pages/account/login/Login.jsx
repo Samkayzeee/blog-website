@@ -25,18 +25,15 @@ const Login = () => {
         }    
 
         if (!Userdata) {
-            console.log("User not Register");
             wrongLogin.innerHTML = "User Not Register Try Signing Up";
         }
         else{
             if (LoginData.email === Userdata.email && LoginData.password === Userdata.password) {
-                console.log("Login Successful");
                 let token = true;
                 localStorage.setItem("token", JSON.stringify(token))
                 navigate('/dashboard');
             }
             else{
-                console.log("Not Successful");
                 wrongLogin.innerHTML = "Login Not Successful";
             }
         }

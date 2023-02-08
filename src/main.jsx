@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import Loading from './components/loading/Loading';
 
 const Dash_board = React.lazy(() => import('./pages/dashboard/Dashboard'));
 const Signup = React.lazy(() => import('./pages/account/signup/Signup'));
@@ -13,7 +14,6 @@ const Contact = React.lazy(() => import('./pages/contact/Contact'));
 const Error404Page = React.lazy(() => import('./pages/error/404'));
 const DetailsPage = React.lazy(() => import('./pages/details/Details'));
 
-const loading = <h1>Loading...</h1>;
 
 const router = createBrowserRouter([
   {path:'/', element : <Home />, errorElement:<Error404Page />},
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-        <Suspense>
-              <RouterProvider router={router}  fallbackElement={loading} />
+        <Suspense fallback={<Loading />} >
+              <RouterProvider router={router} />
         </Suspense>
   </React.StrictMode>
 )

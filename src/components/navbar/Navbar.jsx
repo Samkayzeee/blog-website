@@ -21,7 +21,7 @@ const token = localStorage.getItem("token");
                   <div className="links">
                     <ul>
                       <li> <Link to={'/'}>Home</Link> </li>
-                      <li> <Link to={'/contact'}>Contact Me</Link> </li>
+                      <li> <Link to={'/contact'}>Contact</Link> </li>
                       <li> <Link to={'/dashboard'}>Blogs</Link> </li>
                     </ul>
                   </div>
