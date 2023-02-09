@@ -103,12 +103,15 @@
     background-color: rgb(100, 195, 100);
   }
   @media screen and (max-width:800px) {
+    .signup-container .img{
+      padding: 20% 0;
+    }
     .signup-container .img h1{
         font-size: 40px;
     }
     .signup-form{
         width: 90%;
-        margin: 8% auto;
+        margin: 10% auto;
     }
     .signup-form button{
         width: 70%;

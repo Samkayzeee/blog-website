@@ -111,12 +111,15 @@
 
 
   @media screen and (max-width:800px) {
+    .login-container .img{
+      padding: 20% 0;
+    }
     .login-container .img h1{
-        font-size: 40px;
+        font-size: 35px;
     }
     .login-form{
         width: 90%;
-        margin: 8% auto;
+        margin: 20% auto;
     }
     .login-form button{
         width: 70%;

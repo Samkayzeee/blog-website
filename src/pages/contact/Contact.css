@@ -118,10 +118,15 @@
     height: 100%;
     background-color: rgb(100, 195, 100);
   }
+  .contact-form p{
+    color: rgb(100, 195, 100);
+    font-weight: 700;
+  }
 
   @media screen and (max-width:800px) {
     .contact-container .section1{
         background-attachment: scroll;
+        padding: 20% 0;
     }
     .contact-container .section1 h1{
         font-size: 50px

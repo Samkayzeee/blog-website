@@ -97,5 +97,17 @@
   @media screen and (max-width:800px) {
     .home-container .section1{
       background-attachment: scroll;
+      background-position: center;
+    }
+    .home-container .section1 h1{
+      font-size: 30px;
+      margin-top: 5%;
+      margin-bottom: 10%
+    }
+    .home-container .section1 h3{
+      font-size: 18px
+    }
+    .home-container .section1 a{
+      padding: 1.5% 4%;
     }
   }

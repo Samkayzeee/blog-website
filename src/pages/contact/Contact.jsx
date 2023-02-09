@@ -1,8 +1,30 @@
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./Contact.css";
+import { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+    const formRef = useRef(null);
+    const messageRef = useRef(null);
+    const [message, setMessage] = useState("");
+
+    const sendmail  = async(e) => {
+        e.preventDefault();
+        const form = formRef.current;
+        const message_ref = messageRef.current;
+
+        try{
+            const result = await emailjs.sendForm('service_fxvcxyj', 'template_vggxabq', form, 'CC6qrRtlQzRCdePxS');
+            message_ref.style.color = `rgb(100, 195, 100)`;
+            setMessage("Message sent Successfully");
+        } catch (error){
+            message_ref.style.color = "red";
+            setMessage("Theirs was an error sending your mail");
+        }
+
+        e.target.reset();
+    }
     return (
         <>
             <Navbar />
@@ -29,11 +51,12 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form action="" className="contact-form">
-                    <input type="text" name="" id="" placeholder="Your Name" required/>
-                    <input type="email" name="" id="" placeholder="Your Email" required/>
+                <form ref={formRef} action="" className="contact-form" onSubmit={sendmail} >
+                    <input type="text" name="name" id="" placeholder="Your Name" required/>
+                    <input type="email" name="email" id="" placeholder="Your Email" required/>
                     <input type="text" name="" id="" placeholder="Subject" required/>
-                    <textarea name="" id="" cols={30} rows={10} placeholder="Message" required></textarea>
+                    <textarea name="message" id="" cols={30} rows={10} placeholder="Message" required></textarea>
+                    <p ref={messageRef} className="message">{message}</p>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
