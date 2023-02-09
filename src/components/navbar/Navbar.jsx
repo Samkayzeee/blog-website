@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
+import { useRef, useEffect } from "react";
 
 const Navbar = () => {
 const navigate = useNavigate();
+const dropdown_ul = useRef(null);
 
 
 const token = localStorage.getItem("token");
@@ -11,6 +13,25 @@ const token = localStorage.getItem("token");
     localStorage.removeItem("token");
     navigate('/');
   }
+
+
+  const dropdown = () => {
+    let drop = dropdown_ul.current;
+    if(drop.style.display === ""){
+      drop.style.display = "block";
+    }
+    else if (drop.style.display === "block"){
+      drop.style.display = ""
+    }
+  }
+
+  useEffect(() => {
+    window.onscroll = () => {
+        let drop = dropdown_ul.current
+        drop.style.display = ""
+    }
+},[])
+
     return ( 
         <>
                 <nav className="Navbar">
@@ -18,24 +39,31 @@ const token = localStorage.getItem("token");
                       <Link to={'/'}>SAMKAYZEE.</Link>
                   </div>
                   
-                  <div className="links">
+                  <div ref={dropdown_ul} className="links">
                     <ul>
                       <li> <Link to={'/'}>Home</Link> </li>
                       <li> <Link to={'/contact'}>Contact</Link> </li>
                       <li> <Link to={'/dashboard'}>Blogs</Link> </li>
-                    </ul>
+                   
+                      <li className="account">
+                        {
+                          token?
+                          <button onClick={Logout} className="log out">Log Out</button>:<Link to={'/login'}>Log in</Link>
+                        }
+                      </li>
+
+                      
+                      <li className="account">
+                        {
+                          token?
+                          null: <Link to={'/signup'}>Signup</Link>
+                        }
+                      </li>
+                       </ul>
                   </div>
 
-                  <div className="account">
-                      {
-                        token?
-                        <button onClick={Logout} className="log out">Log Out</button>:<Link to={'/login'}>Log in</Link>
-                      }
-
-                      {
-                        token?
-                        null: <Link to={'/signup'}>Signup</Link>
-                      }
+                  <div onClick={dropdown} className="dropdown_menu">
+                      <i className="fa-solid fa-bars"></i>
                   </div>
                 </nav>
         </>

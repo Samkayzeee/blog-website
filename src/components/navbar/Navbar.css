@@ -23,6 +23,15 @@
     font-weight: 700;
     font-weight: 900;
 }
+
+.Navbar .dropdown_menu{
+    cursor: pointer;
+    display: none;
+    margin-right: 2%;
+}
+.Navbar .dropdown_menu i{
+    font-size: 30px;
+}
 .Navbar .links ul{
     margin: auto 0;
 }
@@ -39,7 +48,7 @@
 .Navbar .links ul li a:hover{
     color: rgb(100, 195, 100);
 }
-.Navbar .account a{
+.Navbar .links ul .account a{
     padding: 8px 20px;
     color: white;
     background-color: black;
@@ -48,13 +57,11 @@
     border-radius: 6px;
     text-decoration: none;
 }
-.Navbar .account a:hover{
+.Navbar .links ul .account a:hover{
     background-color: rgb(100, 195, 100);
+    color: white;
 }
-.Navbar .account a:last-child{
-    margin-left: 20px;
-}
-.Navbar .account button{
+.Navbar .links ul .account button{
     padding: 6px 10px;
     color: white;
     background-color: black;
@@ -64,6 +71,58 @@
     text-decoration: none;
     margin-left: 10px;
 }
-.Navbar .account button:hover{
+.Navbar .links ul .account button:hover{
     background-color: rgb(100, 195, 100);
+}
+@media screen and (max-width:800px) {
+    .Navbar .dropdown_menu{
+        display: block;
+    }
+    .Navbar .links{
+        display: none;
+        position: absolute;
+        border: solid 1.5px;
+        top: 80%;
+        background-color: white;
+        right: 5%;
+        width: 90%;
+        z-index: +6;
+        animation: dropdown 1s linear;
+        animation-fill-mode: forwards;
+        animation-duration: 0.3s;
+        padding: 2%;
+  }
+  @keyframes dropdown {
+    0%{
+      transform: translateY(-60px);
+    }
+    25%{
+      transform: translateY(-40px);
+    }
+    50%{
+      transform: translateY(-20px)
+    }
+    75%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform:translateY(0px)
+    }
+    }
+    .Navbar .links ul{
+        display: flex;
+        flex-direction: column;
+      }
+      .Navbar .links ul li{
+        margin: 2% 0;
+      }
+      .Navbar .links li a{
+        display: block;
+      }
+      .Navbar .links ul .account button{
+        margin: 0;
+      }
+      .Navbar .links ul .account a{
+        width: fit-content;
+      }
 }
