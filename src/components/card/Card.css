@@ -38,6 +38,10 @@
     opacity: 0.9;
     font-size: 20px;
     margin: 2% 0;
+    transition: all .4s;
+}
+.blog-container .main-container .item .details .title a h3:hover{
+    text-decoration: underline;
 }
 .blog-container .main-container .item .details .title p{
     opacity: 0.8;
@@ -61,6 +65,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .blog-container .main-container .item .details .title a h3{
+        text-decoration: underline;
     }
 }
 
