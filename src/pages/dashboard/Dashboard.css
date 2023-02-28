@@ -55,6 +55,7 @@
   .dashboard-section1{
     background-attachment: scroll;
     padding: 20% 0;
+    margin-bottom: 6%;
   }
   .dashboard-section1 .inside h1{
     font-size: 35px;
