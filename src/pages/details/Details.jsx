@@ -5,6 +5,7 @@ import { blog } from "../../assets/data/data";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import './Details.css';
+import DefaultLayout from "../../layout/DefaultLayout";
 
 
 const DetailsPage = () => {
@@ -28,8 +29,8 @@ const DetailsPage = () => {
 
     return ( 
         <>
-        <Navbar />
-            {
+        <DefaultLayout>
+        {
                 blogs? (
                     <div className="detail-page">
                         <div className="container">
@@ -49,7 +50,7 @@ const DetailsPage = () => {
                     </div>
                 ) : null
             }
-            <Footer />
+        </DefaultLayout>
         </>
      );
 }

@@ -1,9 +1,8 @@
-import Navbar from "../../../components/navbar/Navbar";
 import './Login.css';
 import { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
-import Footer from './../../../components/footer/Footer';
+import DefaultLayout from "../../../layout/DefaultLayout";
 
 const Login = () => {
     const wrongloginRef = useRef(null);
@@ -41,7 +40,7 @@ const Login = () => {
     }
     return ( 
         <>
-        <Navbar />
+        <DefaultLayout>
         <div className="login-container">
             <div className="img">
                 <h1>Login Your Account</h1>
@@ -60,7 +59,7 @@ const Login = () => {
 
         </form>
         </div>
-        <Footer />
+        </DefaultLayout>
         </>
      );
 }

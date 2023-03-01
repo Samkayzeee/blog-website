@@ -1,8 +1,7 @@
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import "./Contact.css";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import DefaultLayout from "../../layout/DefaultLayout";
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -27,7 +26,7 @@ const Contact = () => {
     }
     return (
         <>
-            <Navbar />
+            <DefaultLayout>
             <div className="contact-container">
                 <div className="section1">
                     <h1>Contact Me</h1>
@@ -60,7 +59,7 @@ const Contact = () => {
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-            <Footer />
+            </DefaultLayout>
         </>
       );
 }

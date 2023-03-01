@@ -2,14 +2,17 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 
 
-const Layout = ({ Children }) => {
+const DefaultLayout = ({ children }) => {
     return ( 
         <>
             <Navbar />
-                { Children }
+                <main>
+                    { children }
+                </main>
+
             <Footer />
         </>
      );
 }
  
-export default Layout;
+export default DefaultLayout;

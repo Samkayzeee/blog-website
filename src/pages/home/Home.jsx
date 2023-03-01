@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import './Home.css';
 import Category from "../../components/category/category";
-import { category } from "../../assets/data/data";
+import DefaultLayout from "../../layout/DefaultLayout";
 
 
 const Home = () => {
     return ( 
         <>
-            <Navbar />
+            <DefaultLayout>
             <div className="home-container">
                 <div className="section1">
                     <div className="inside">
@@ -23,7 +21,8 @@ const Home = () => {
             <div className="category-section">
                 <Category />
             </div>
-            <Footer />
+
+            </DefaultLayout>
         </>
      );
 }

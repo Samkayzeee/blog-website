@@ -3,6 +3,7 @@ import Navbar from "../../../components/navbar/Navbar";
 import './Signup.css';
 import Footer from './../../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import DefaultLayout from "../../../layout/DefaultLayout";
 
 
 
@@ -32,8 +33,8 @@ const Signup = () => {
 
     return ( 
         <>
-        <Navbar />
-           <div className="signup-container">
+        <DefaultLayout>
+        <div className="signup-container">
            <div className="img">
                 <h1>Register Your Account</h1>
             </div>
@@ -54,7 +55,7 @@ const Signup = () => {
         </form>
 
            </div>
-           <Footer />
+        </DefaultLayout>
         </>
      );
 }
