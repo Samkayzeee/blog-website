@@ -2,11 +2,14 @@ import "./Contact.css";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import DefaultLayout from "../../layout/DefaultLayout";
+import { ThemeContext } from "../../contexts/ThemeProvider";
+import { useContext } from "react";
 
 const Contact = () => {
     const formRef = useRef(null);
     const messageRef = useRef(null);
     const [message, setMessage] = useState("");
+    const context = useContext(ThemeContext)
 
     const sendmail  = async(e) => {
         e.preventDefault();
@@ -50,13 +53,13 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form ref={formRef} action="" className="contact-form" onSubmit={sendmail} >
+                <form ref={formRef} action="" className="contact-form" onSubmit={sendmail} style={{ backgroundColor: context.theme === "light"? "rgb(248, 248, 248)" : "black"}}>
                     <input type="text" name="name" id="" placeholder="Your Name" required/>
                     <input type="email" name="email" id="" placeholder="Your Email" required/>
                     <input type="text" name="" id="" placeholder="Subject" required/>
                     <textarea name="message" id="" cols={30} rows={10} placeholder="Message" required></textarea>
                     <p ref={messageRef} className="message">{message}</p>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" style={{border: context.theme === "light" ? "none" : "solid 1px white"}}>Send Message</button>
                 </form>
             </div>
             </DefaultLayout>

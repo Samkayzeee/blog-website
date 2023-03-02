@@ -5,6 +5,7 @@
     padding: 12% 0;
     background-size: cover;
     background-attachment: fixed;
+    transition: all .4s;
 }
 .contact-container .section1 h1{
     color: white;

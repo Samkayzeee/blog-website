@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { ThemeContext } from "../../contexts/ThemeProvider";
+import { useContext } from "react";
+
 
 const Footer = () => {
+     const context = useContext(ThemeContext);
     return ( 
         <>
              <footer className="footer">

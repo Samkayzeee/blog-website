@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import ThemeProvider from './contexts/ThemeProvider';
 import Loading from './components/loading/Loading';
+
 
 const Dash_board = React.lazy(() => import('./pages/dashboard/Dashboard'));
 const Signup = React.lazy(() => import('./pages/account/signup/Signup'));
@@ -27,8 +29,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-        <Suspense fallback={<Loading />} >
-              <RouterProvider router={router} />
+        <ThemeProvider>
+        <Suspense fallback={ <Loading /> } >
+            <RouterProvider router={router} /> 
         </Suspense>
+     </ThemeProvider>
   </React.StrictMode>
 )

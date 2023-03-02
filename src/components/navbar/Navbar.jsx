@@ -1,10 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
 import { useRef, useEffect } from "react";
+import { ThemeContext } from "../../contexts/ThemeProvider";
+import { useContext } from "react";
+
 
 const Navbar = () => {
+
 const navigate = useNavigate();
 const dropdown_ul = useRef(null);
+const context = useContext(ThemeContext);
 
 
 const token = localStorage.getItem("token");
@@ -51,7 +56,6 @@ const token = localStorage.getItem("token");
                           <button onClick={Logout} className="log out">Log Out</button>:<Link to={'/login'}>Log in</Link>
                         }
                       </li>
-
                       
                       <li className="account">
                         {
@@ -59,6 +63,12 @@ const token = localStorage.getItem("token");
                           null: <Link to={'/signup'}>Signup</Link>
                         }
                       </li>
+
+                      {/* <li>
+                          <button onClick={() => context.setTheme(context.theme === "light" ? "dark" : "light")}> 
+                          <i className={context.theme === "light"? "fa solid fa-toggle-on": "fa solid fa-toggle-off"}></i>
+                          </button>
+                      </li> */}
                        </ul>
                   </div>
 

@@ -3,7 +3,8 @@
 
 .specified-categories{
     font-family: 'Kanit', sans-serif;
-    margin: 2% 0 0 4%;
+    margin: 0 0 0 4%;
+    padding-top: 2%;
     font-weight: 800;
 }
 .category-component{
