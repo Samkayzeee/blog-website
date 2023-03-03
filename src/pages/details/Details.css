@@ -3,6 +3,7 @@
 }
 .detail-page .container{
     width: 100%;
+    padding-top: 10%;
 }
 .detail-page .container .img{
     width: 100%;
@@ -17,7 +18,7 @@
 .detail-page .container .details h3{
     font-size: 30px;
     text-transform: capitalize;
-    margin: 2% 0;
+    margin: 3% 0;
     font-weight: 700;
 }
 .detail-page .container .details p{
@@ -33,4 +34,14 @@
 
 .detail_dark_mode .img{
     border: solid 1px white;
+}
+
+@media screen and (max-width:900px) {
+    .detail-page .container .details h3{
+        font-size: 25px;
+    }
+
+    .detail-page .container .details p{
+        font-size: 15px;
+    }   
 }
