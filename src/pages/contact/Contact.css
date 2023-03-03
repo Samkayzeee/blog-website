@@ -124,6 +124,18 @@
     font-weight: 700;
   }
 
+  .contact_dark_mode{
+    background-color: black;
+    color: white;
+  }
+  .contact_dark_mode .contact-form{
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+    margin-bottom: 0;
+    padding-bottom: 3%;
+  }
+
   @media screen and (max-width:800px) {
     .contact-container .section1{
         background-attachment: scroll;

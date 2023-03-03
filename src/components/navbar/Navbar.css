@@ -74,6 +74,22 @@
 .Navbar .links ul .account button:hover{
     background-color: rgb(100, 195, 100);
 }
+.dark_mode_toggle{
+  cursor: pointer;
+  /* border: solid; */
+}
+.dark_mode_toggle i{
+  font-size: 20px;
+  display: inline-block;
+  height: fit-content;
+  transform: translateY(2px);
+}
+.dark_mode_toggle span{
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 600;
+  display: inline-block;
+}
 @media screen and (max-width:800px) {
     .Navbar .dropdown_menu{
         display: block;

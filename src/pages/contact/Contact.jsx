@@ -30,7 +30,7 @@ const Contact = () => {
     return (
         <>
             <DefaultLayout>
-            <div className="contact-container">
+            <div className={context.theme === "light"? "contact-container" : "contact-container contact_dark_mode"}>
                 <div className="section1">
                     <h1>Contact Me</h1>
                 </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form ref={formRef} action="" className="contact-form" onSubmit={sendmail} style={{ backgroundColor: context.theme === "light"? "rgb(248, 248, 248)" : "black"}}>
+                <form ref={formRef} action="" className="contact-form" onSubmit={sendmail}>
                     <input type="text" name="name" id="" placeholder="Your Name" required/>
                     <input type="email" name="email" id="" placeholder="Your Email" required/>
                     <input type="text" name="" id="" placeholder="Subject" required/>
@@ -61,6 +61,7 @@ const Contact = () => {
                     <p ref={messageRef} className="message">{message}</p>
                     <button type="submit" style={{border: context.theme === "light" ? "none" : "solid 1px white"}}>Send Message</button>
                 </form>
+                
             </div>
             </DefaultLayout>
         </>

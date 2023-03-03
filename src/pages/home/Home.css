@@ -94,6 +94,10 @@
     margin-left: 10px;
   }
 
+  .category_dark_mode{
+    background-color: black;
+    color: white;
+  }
   @media screen and (max-width:800px) {
     .home-container .section1{
       background-attachment: scroll;

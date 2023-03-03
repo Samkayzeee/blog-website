@@ -49,6 +49,10 @@ const token = localStorage.getItem("token");
                       <li> <Link to={'/'}>Home</Link> </li>
                       <li> <Link to={'/contact'}>Contact</Link> </li>
                       <li> <Link to={'/dashboard'}>Blogs</Link> </li>
+                      <li onClick={() => context.setTheme(context.theme === "light" ? "dark" : "light")} className="dark_mode_toggle">
+                          <i className={context.theme === "light"? "fa solid fa-toggle-on": "fa solid fa-toggle-off"}></i>
+                          <span>{context.theme === "light"? "Dark Mode" : "Light Mode"}</span>
+                      </li>
                    
                       <li className="account">
                         {
@@ -63,12 +67,6 @@ const token = localStorage.getItem("token");
                           null: <Link to={'/signup'}>Signup</Link>
                         }
                       </li>
-
-                      {/* <li>
-                          <button onClick={() => context.setTheme(context.theme === "light" ? "dark" : "light")}> 
-                          <i className={context.theme === "light"? "fa solid fa-toggle-on": "fa solid fa-toggle-off"}></i>
-                          </button>
-                      </li> */}
                        </ul>
                   </div>
 

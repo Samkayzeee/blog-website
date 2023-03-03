@@ -1,5 +1,5 @@
 .cards{
-    padding: 2%;
+    padding: 6% 2% 2% 2%;
     background-color: rgb(251, 251, 251);
 }
 .dashboard-section1{
@@ -51,11 +51,13 @@
     font-weight: 700;
     margin: 2% 0;
 }
+.card_dark_mode{
+  background-color: black;
+}
 @media screen and (max-width:900px) {
   .dashboard-section1{
     background-attachment: scroll;
     padding: 20% 0;
-    margin-bottom: 6%;
   }
   .dashboard-section1 .inside h1{
     font-size: 35px;

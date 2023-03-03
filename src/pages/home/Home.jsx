@@ -21,7 +21,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="category-section">
+            <div className={context.theme === "light"? null : "category_dark_mode"}>
                 <Category />
             </div>
 

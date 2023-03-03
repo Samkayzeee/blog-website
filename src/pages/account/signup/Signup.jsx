@@ -4,13 +4,15 @@ import './Signup.css';
 import Footer from './../../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
 import DefaultLayout from "../../../layout/DefaultLayout";
+import { useContext } from 'react';
+import { ThemeContext } from '../../../contexts/ThemeProvider';
 
 
 
 
 const Signup = () => {
+   const context = useContext(ThemeContext);
    const navigate = useNavigate();
-
    const [email, setEmail] = useState("");
    const [username, setUsername] = useState("");
    const [password, setPassword] = useState("");
@@ -34,7 +36,7 @@ const Signup = () => {
     return ( 
         <>
         <DefaultLayout>
-        <div className="signup-container">
+        <div className={context.theme === "light"? "signup-container" : "signup-container signup_dark_mode"}>
            <div className="img">
                 <h1>Register Your Account</h1>
             </div>

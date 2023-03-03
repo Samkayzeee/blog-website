@@ -1,10 +1,12 @@
 import './Login.css';
 import { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { useEffect } from 'react';
 import DefaultLayout from "../../../layout/DefaultLayout";
+import { useContext } from 'react';
+import { ThemeContext } from '../../../contexts/ThemeProvider';
 
 const Login = () => {
+    const context = useContext(ThemeContext);
     const wrongloginRef = useRef(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -29,8 +31,13 @@ const Login = () => {
         else{
             if (LoginData.email === Userdata.email && LoginData.password === Userdata.password) {
                 let token = true;
-                localStorage.setItem("token", JSON.stringify(token))
-                navigate('/dashboard');
+                localStorage.setItem("token", JSON.stringify(token));
+                wrongLogin.innerHTML = "Login Successful";
+                wrongLogin.style.color = "green";
+
+                setTimeout(() => {
+                    navigate('/dashboard');
+                }, 2000);
             }
             else{
                 wrongLogin.innerHTML = "Login Not Successful";
@@ -41,7 +48,7 @@ const Login = () => {
     return ( 
         <>
         <DefaultLayout>
-        <div className="login-container">
+        <div className={context.theme === "light"? "login-container" : "login-container login_dark_mode"}>
             <div className="img">
                 <h1>Login Your Account</h1>
             </div>

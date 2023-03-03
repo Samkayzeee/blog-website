@@ -108,7 +108,16 @@
     transition: all .3s;
     font-weight: 600;
   }
-
+.login_dark_mode{
+  background-color: black;
+}
+.login_dark_mode .login-form{
+  background-color: black;
+  color: white;
+}
+.login_dark_mode .login-form button{
+  border: solid 1px white;
+}
 
   @media screen and (max-width:800px) {
     .login-container .img{
@@ -125,5 +134,8 @@
         width: 70%;
         display: block;
         margin: 2% auto;
+    }
+    .login-form p{
+      font-size: 14px;
     }
   }

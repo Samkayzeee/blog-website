@@ -2,14 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../../components/card/Card";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import "./Dashboard.css";
 import DefaultLayout from "../../layout/DefaultLayout";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeProvider";
 
 
 const Dashboard = () => {
-    const [api, setApi] = useState([]);
+    const context = useContext(ThemeContext);
     const navigate = useNavigate();
     let token = localStorage.getItem("token");
 
@@ -31,7 +31,7 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="cards">
+                <div className={context.theme === "light"? "cards" : "cards card_dark_mode" }>
                     <Card />
                 </div>
             </DefaultLayout>

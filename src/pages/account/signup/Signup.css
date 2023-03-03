@@ -102,6 +102,16 @@
     height: 100%;
     background-color: rgb(100, 195, 100);
   }
+  .signup_dark_mode{
+    background-color: black;
+  }
+  .signup_dark_mode .signup-form{
+    background-color: black;
+    color: white;
+  }
+  .signup_dark_mode .signup-form button{
+    border: solid 1px white;
+  }
   @media screen and (max-width:800px) {
     .signup-container .img{
       padding: 20% 0;

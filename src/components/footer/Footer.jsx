@@ -8,7 +8,7 @@ const Footer = () => {
      const context = useContext(ThemeContext);
     return ( 
         <>
-             <footer className="footer">
+             <footer className={context.theme === "light"? "footer" : "footer footer_dark"}>
                <div className="section1">
                     <h5>Copyright <i className="fa-regular fa-copyright"></i> 2023 Samkayzee Blog. By Lasisi Abdulsamad</h5>
                </div>
@@ -21,7 +21,7 @@ const Footer = () => {
                </div>
              </footer>
         </>
-     );
+     ); 
 }
  
 export default Footer;

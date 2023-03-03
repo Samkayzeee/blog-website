@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { blog } from "../../assets/data/data";
-import Footer from "../../components/footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
 import './Details.css';
 import DefaultLayout from "../../layout/DefaultLayout";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeProvider";
 
 
 const DetailsPage = () => {
     const { id } = useParams();
     const [blogs, setBlogs] = useState(null);
+    const context = useContext(ThemeContext);
 
 
     const navigate = useNavigate();
@@ -32,7 +33,7 @@ const DetailsPage = () => {
         <DefaultLayout>
         {
                 blogs? (
-                    <div className="detail-page">
+                    <div className={context.theme === "light"? "detail-page" : "detail-page detail_dark_mode"}>
                         <div className="container">
                             <div className="img">
                                 <img src={blogs.cover} alt={blogs.title} />
