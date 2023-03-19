@@ -1,9 +1,6 @@
 import { useState } from "react";
-import Navbar from "../../../components/navbar/Navbar";
 import './Signup.css';
-import Footer from './../../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
-import DefaultLayout from "../../../layout/DefaultLayout";
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider';
 
@@ -35,7 +32,6 @@ const Signup = () => {
 
     return ( 
         <>
-        <DefaultLayout>
         <div className={context.theme === "light"? "signup-container" : "signup-container signup_dark_mode"}>
            <div className="img">
                 <h1>Register Your Account</h1>
@@ -57,7 +53,6 @@ const Signup = () => {
         </form>
 
            </div>
-        </DefaultLayout>
         </>
      );
 }

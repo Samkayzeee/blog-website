@@ -1,7 +1,6 @@
 import './Login.css';
 import { useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import DefaultLayout from "../../../layout/DefaultLayout";
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider';
 
@@ -47,7 +46,6 @@ const Login = () => {
     }
     return ( 
         <>
-        <DefaultLayout>
         <div className={context.theme === "light"? "login-container" : "login-container login_dark_mode"}>
             <div className="img">
                 <h1>Login Your Account</h1>
@@ -66,7 +64,6 @@ const Login = () => {
 
         </form>
         </div>
-        </DefaultLayout>
         </>
      );
 }

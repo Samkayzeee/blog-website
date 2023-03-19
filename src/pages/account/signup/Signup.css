@@ -113,6 +113,9 @@
     border: solid 1px white;
   }
   @media screen and (max-width:800px) {
+    .signup-container{
+      padding-bottom: 30%;
+    }
     .signup-container .img{
       padding: 20% 0;
     }

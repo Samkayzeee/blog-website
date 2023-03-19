@@ -120,6 +120,9 @@
 }
 
   @media screen and (max-width:800px) {
+    .login-container{
+      padding-bottom: 30%;
+    }
     .login-container .img{
       padding: 20% 0;
     }
