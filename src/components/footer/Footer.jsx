@@ -15,8 +15,8 @@ const Footer = () => {
 
                <div className="links">
                     <Link to={'https://github.com/Samkayzeee'} target={'_blank'}><i className="fa-brands fa-github"></i></Link>
-                    <Link to={'www.linkedin.com/in/lasisi-abdulsamad-1a493b22b'} target={'_blank'}><i className="fa-brands fa-linkedin"></i></Link>
-                    <Link to={'https://www.instagram.com/samkayzee/'} target={'_blank'}><i className="fa-brands fa-instagram"></i></Link>
+                    <Link to={'www.linkedin.com/in/lasisi-abdulsamad'} target={'_blank'}><i className="fa-brands fa-linkedin"></i></Link>
+                    <Link to={'https://twitter.com/Samkayzee1'} target={'_blank'}><i className="fa-brands fa-twitter"></i></Link>
 
                </div>
              </footer>
