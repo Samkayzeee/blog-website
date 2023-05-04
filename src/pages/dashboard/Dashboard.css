@@ -52,7 +52,7 @@
     margin: 2% 0;
 }
 .card_dark_mode{
-  background-color: black;
+  background-color: rgb(0, 0, 12);
 }
 @media screen and (max-width:900px) {
   .dashboard-section1{

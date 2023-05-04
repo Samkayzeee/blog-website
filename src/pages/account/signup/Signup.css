@@ -103,10 +103,10 @@
     background-color: rgb(100, 195, 100);
   }
   .signup_dark_mode{
-    background-color: black;
+    background-color: rgb(0, 0, 12);
   }
   .signup_dark_mode .signup-form{
-    background-color: black;
+    background-color: rgb(0, 0, 12);
     color: white;
   }
   .signup_dark_mode .signup-form button{

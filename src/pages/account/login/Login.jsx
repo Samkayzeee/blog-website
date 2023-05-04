@@ -1,6 +1,6 @@
 import './Login.css';
 import { useRef, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider';
 
@@ -58,9 +58,10 @@ const Login = () => {
 
             <label htmlFor="password">Password*</label>
             <input onChange={(e) => setPassword(e.target.value)} type="password" name="" id="password" required minLength={8}/>
-            <p ref={wrongloginRef}></p>
+            <p className='wrong' ref={wrongloginRef}></p>
 
             <button type="submit">Login <i className="fa-solid fa-right-to-bracket"></i></button>
+            <p className='new-user'>New User? <Link to={'/signup'}>create an account</Link></p>
 
         </form>
         </div>

@@ -139,6 +139,7 @@
         margin: 0;
       }
       .Navbar .links ul .account a{
+        width: -moz-fit-content;
         width: fit-content;
       }
 }

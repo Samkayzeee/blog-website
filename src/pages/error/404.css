@@ -37,6 +37,7 @@
     opacity: 0.9;
     overflow: hidden;
     border: none;
+    width: -moz-fit-content;
     width: fit-content;
     text-decoration: none;
     margin: 0 auto;
@@ -65,6 +66,7 @@
   }
   @media screen and (max-width:700px) {
     .error_404{
+      width: -moz-fit-content;
       width: fit-content;
       padding: 50% 0;
       background-color: white;

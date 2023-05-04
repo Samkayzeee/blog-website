@@ -21,7 +21,7 @@
   color: rgb(100, 195, 100);
 }
 .footer_dark{
-  background-color: black;
+  background-color: rgb(0, 0, 12);
   color: white;
 }
 .footer_dark .links a{

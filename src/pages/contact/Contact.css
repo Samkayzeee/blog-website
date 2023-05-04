@@ -125,11 +125,11 @@
   }
 
   .contact_dark_mode{
-    background-color: black;
+    background-color: rgb(0, 0, 12);
     color: white;
   }
   .contact_dark_mode .contact-form{
-    background-color: black;
+    background-color: rgb(0, 0, 12);
     color: white;
     border: solid 1px white;
     margin-bottom: 0;

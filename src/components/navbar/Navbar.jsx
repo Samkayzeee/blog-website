@@ -39,7 +39,7 @@ const token = localStorage.getItem("token");
 
     return ( 
         <>
-                <nav className="Navbar">
+                <nav className='Navbar'>
                   <div className="logo">
                       <Link to={'/'}>SAMKAYZEE.</Link>
                   </div>
@@ -51,7 +51,6 @@ const token = localStorage.getItem("token");
                       <li> <Link to={'/dashboard'}>Blogs</Link> </li>
                       <li onClick={() => context.setTheme(context.theme === "light" ? "dark" : "light")} className="dark_mode_toggle">
                           <i className={context.theme === "light"? "fa-solid fa-moon" : "fa-solid fa-sun"}></i>
-                          {/* <span>{context.theme === "light"? "Dark Mode" : "Light Mode"}</span> */}
                       </li>
                    
                       <li className="account">
