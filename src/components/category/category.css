@@ -20,7 +20,8 @@
     cursor: pointer;
 }
 .main-items img{
-    width: 50%;
+    width: 50%;border-radius: 5px;
+
 }
 .main-items .flex{
     margin-left: 35px;
