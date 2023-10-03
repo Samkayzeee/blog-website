@@ -9,10 +9,12 @@ export {ThemeContext};
 //Composite component
 const ThemeProvider = ({children})=> {
 
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(
+        () => {
+            return localStorage.getItem('theme') || 'light';
+        }
+    );
     
-    
-
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>
             {children}

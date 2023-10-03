@@ -12,6 +12,14 @@ const dropdown_ul = useRef(null);
 const context = useContext(ThemeContext);
 
 
+const toggleDarkmode = () => {
+  const newTheme = context.theme === 'light' ? 'dark' : 'light';
+  context.setTheme(newTheme);
+
+  localStorage.setItem('theme', newTheme);
+}
+
+
 const token = localStorage.getItem("token");
 
   const Logout = () => {
@@ -49,7 +57,7 @@ const token = localStorage.getItem("token");
                       <li> <Link to={'/'}>Home</Link> </li>
                       <li> <Link to={'/contact'}>Contact</Link> </li>
                       <li> <Link to={'/dashboard'}>Blogs</Link> </li>
-                      <li onClick={() => context.setTheme(context.theme === "light" ? "dark" : "light")} className="dark_mode_toggle">
+                      <li onClick={toggleDarkmode} className="dark_mode_toggle">
                           <i className={context.theme === "light"? "fa-solid fa-moon" : "fa-solid fa-sun"}></i>
                       </li>
                    
