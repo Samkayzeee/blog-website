@@ -81,7 +81,7 @@ const Contact = () => {
 
                     <div className="infos">
                         <div className="address">
-                                Location: Ibadan, Oyo, Nigeria.
+                            <span>Location:</span> Ibadan, Oyo, Nigeria.
                         </div>
 
                         <div className="phone">

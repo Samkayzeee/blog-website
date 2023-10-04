@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     border-top: solid 1px lightgray;
-    /* margin-top: 3%; */
 }
 .footer .section1 h5{
     font-size: 15px;
