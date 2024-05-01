@@ -1,7 +1,6 @@
 import './Login.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider';
 
 const Login = () => {

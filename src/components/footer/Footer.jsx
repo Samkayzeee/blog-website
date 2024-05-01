@@ -10,7 +10,7 @@ const Footer = () => {
         <>
              <footer className={context.theme === "light"? "footer" : "footer footer_dark"}>
                <div className="section1">
-                    <h5>Copyright <i className="fa-regular fa-copyright"></i> 2023 Samkayzee Blog. By Lasisi Abdulsamad</h5>
+                    <h5>Copyright <i className="fa-regular fa-copyright"></i> 2024 Samkayzee Blog. By Lasisi Abdulsamad</h5>
                </div>
 
                <div className="links">

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { category } from "../../assets/data/data";
 import './category.css';
-import { ThemeContext } from "../../contexts/ThemeProvider";
-import { useContext } from "react";
+// import { ThemeContext } from "../../contexts/ThemeProvider";
+// import { useContext } from "react";
 
 
 const Category = () => {

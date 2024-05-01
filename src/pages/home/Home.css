@@ -6,9 +6,13 @@
     background: 
     linear-gradient(to right,  rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.92)), 
     url('../../assets/home-page-pic.jpg');
-    padding: 12% 0;
+    /* padding: 12% 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 .home-container .section1 h1{
     color: white;
@@ -16,14 +20,14 @@
     font-size: 50px;
     font-weight: 700;
 }
-.home-container .section1 .inside{
+/* .home-container .section1 .inside{
     animation: fade_in 1s linear;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
     visibility: hidden;
-}
-@keyframes fade_in {
+} */
+/* @keyframes fade_in {
   0%{
     transform: translateY(50px);
     visibility: visible;
@@ -44,7 +48,7 @@
     transform: translateY(0);
     visibility: visible;
   }
-}
+} */
 .home-container .section1 h3{
     color: white;
     text-align: center;

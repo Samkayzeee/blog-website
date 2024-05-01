@@ -76,7 +76,6 @@
 }
 .dark_mode_toggle{
   cursor: pointer;
-  /* border: solid; */
 }
 .dark_mode_toggle i{
   font-size: 20px;

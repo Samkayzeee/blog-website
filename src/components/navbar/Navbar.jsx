@@ -1,8 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import './Navbar.css';
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeProvider";
-import { useContext } from "react";
 
 
 const Navbar = () => {

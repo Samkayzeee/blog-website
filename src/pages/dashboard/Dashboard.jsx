@@ -1,10 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../../components/card/Card";
 import "./Dashboard.css";
 import DefaultLayout from "../../layout/DefaultLayout";
-import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeProvider";
 
 

@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/ThemeProvider';
 
 

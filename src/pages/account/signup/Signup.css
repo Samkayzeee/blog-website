@@ -9,19 +9,22 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    padding: 15% 0;
+    height: 80dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .signup-container .img h1{
     font-size: 50px;
     text-align: center;
     color: white;
-    animation: fade_in 1s linear;
+    /* animation: fade_in 1s linear;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
-    visibility: hidden;
+    visibility: hidden; */
 }
-@keyframes fade_in {
+/* @keyframes fade_in {
   0%{
     transform: translateY(50px);
     visibility: visible;
@@ -42,7 +45,7 @@
     transform: translateY(0);
     visibility: visible;
   }
-}
+} */
 
 .signup-form{
     border: solid 2px lightgray;
@@ -82,7 +85,6 @@
     opacity: 0.9;
     overflow: hidden;
     border: none;
-    color: white;
     width: 100%;
   }
   .signup-form button:hover {
