@@ -14,7 +14,7 @@ const Home = () => {
             <div className="home-container" >
                 <div className="section1">
                     <div className="inside">
-                        <h1>Welcome to Samkayzee Blog.</h1>
+                        <h1 className="">Welcome to Samkayzee Blog.</h1>
                         <h3>That's right you only pay legal fees if your case is successful!</h3>
                         <Link to={'/dashboard'}>View Blogs <i className="fa-solid fa-arrow-right"></i></Link>
                     </div>
